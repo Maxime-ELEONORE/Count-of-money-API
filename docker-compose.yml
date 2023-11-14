@@ -38,7 +38,7 @@ services:
     networks:
       - my_network
     environment:
-      - DB_URI=mongodb://mongo:27017/mydatabase
+      - DB_URI=mongodb://mongo:27017/countofmoney_db
 
 volumes:
   mongodb-data:
