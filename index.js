@@ -52,10 +52,6 @@ async function getTopCryptocurrencies() {
       console.error('Error fetching top cryptocurrencies:', error);
     }
   }
-  
-// getTopCryptocurrencies();
-// getCryptoPriceHistory('bitcoin');
-// getCryptoPriceHistory('ethereum');
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
