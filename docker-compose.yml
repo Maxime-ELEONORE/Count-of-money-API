@@ -28,6 +28,8 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: pass
     networks:
       - my_network
+    depends_on:
+      - mongo
 
   express-app:
     build:
@@ -39,6 +41,8 @@ services:
       - my_network
     environment:
       - DB_URI=mongodb://mongo:27017/countofmoney_db
+    depends_on:
+      - mongo
 
 volumes:
   mongodb-data:
