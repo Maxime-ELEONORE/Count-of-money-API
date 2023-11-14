@@ -1,7 +1,6 @@
 #! /usr/bin/env python3
 import requests
 import re
-import brotli # à enlever si jamais utiliser et a pip uninstall brotli mais pour l'instant on sais jamais
 from unidecode import unidecode
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
