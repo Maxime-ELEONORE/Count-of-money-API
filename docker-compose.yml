@@ -40,8 +40,12 @@ services:
     networks:
       - my_network
     environment:
-      - DB_URI=mongodb://mongo:27017/countofmoney_db
-    depends_on:
+      - DB_URI: mongodb://mongo:27017/countofmoney_db
+      - DB_HOST: mongo
+      - DB_PORT: 27017
+      - DB_USER: admin
+      - DB_PASS: pass
+DB_NAME=admin    depends_on:
       - mongo
 
 volumes:
