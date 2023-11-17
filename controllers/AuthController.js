@@ -6,10 +6,17 @@ const AuthController = {
 
     async register(req, res) {
         try {
+            console.log('Tentative d\'inscription avec les données:', req.body);
+    
             const user = new User(req.body);
             await user.save();
+    
+            console.log('Inscription réussie pour l\'utilisateur:', user);
+    
             res.status(201).send({ user, message: 'Inscription réussie' });
         } catch (error) {
+            console.error('Erreur lors de l\'inscription:', error);
+    
             res.status(400).send(error);
         }
     },

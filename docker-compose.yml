@@ -1,35 +1,29 @@
-version: '3.1'
+version: '3.8'
 
 services:
-  mongo:
-    image: mongo
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
     restart: always
-    ports:
-      - 27017:27017
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: pass
-      MONGO_INITDB_DATABASE: countofmoney_db
+    ports:
+      - "27017:27017"
     volumes:
-      - mongodb-data:/data/db
-      - mongodb-config:/data/configdb
-      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
-    networks:
-      - my_network
-
+      - mongodb_data:/data/db
+    
   mongo-express:
     image: mongo-express
     restart: always
     ports:
       - 8081:8081
     environment:
-      ME_CONFIG_MONGODB_SERVER: mongo
+      ME_CONFIG_MONGODB_SERVER: mongodb
       ME_CONFIG_MONGODB_ADMINUSERNAME: admin
       ME_CONFIG_MONGODB_ADMINPASSWORD: pass
-    networks:
-      - my_network
     depends_on:
-      - mongo
+      - mongodb
 
   express-app:
     build:
@@ -37,21 +31,17 @@ services:
       dockerfile: Dockerfile
     ports:
       - "4000:4000"
-    networks:
-      - my_network
     environment:
-      DB_URI: mongodb://mongo:27017/countofmoney_db
+      DB_URI: mongodb://admin:pass@mongodb:27017
       DB_HOST: mongo
       DB_PORT: 27017
       DB_USER: admin
       DB_PASS: pass
-      DB_NAME: countofmoney_db
     depends_on:
-      - mongo
+      - mongodb
 
 volumes:
-  mongodb-data:
-  mongodb-config:
+  mongodb_data:
 
 networks:
   my_network:

@@ -4,7 +4,7 @@ import authMiddleware from '../middlewares/Auth.js';
 
 const UserRouter = express.Router();
 
-// UserRouter.use(authMiddleware);
+UserRouter.use(authMiddleware);
 
 UserRouter.post('/', UserController.createUser);
 UserRouter.get('/', UserController.getAllUsers);
