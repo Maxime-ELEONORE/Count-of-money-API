@@ -6,7 +6,7 @@ import mongoose from 'mongoose';
 import UserRouter from './routers/UserRouter.js';
 import AuthRouter from './routers/AuthRouter.js';
 import CryptoRouter from './routers/CryptoRouter.js';
-import logger from './middlewares/loggerMiddleware';
+import logger from './middlewares/Logger.js';
 
 const app = express();
 const port = 4000;
