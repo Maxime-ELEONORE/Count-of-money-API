@@ -3,7 +3,7 @@ import rateLimit from 'axios-rate-limit';
 
 const baseURL = 'https://api.coingecko.com/api/v3';
 
-const http = rateLimit(axios.create(), { maxRequests: 3, perMilliseconds: 60000, maxRPS: 0.5 })
+const http = rateLimit(axios.create(), { maxRequests: 3, perMilliseconds: 60000})
 
 const CoinGeckoService = {
 
