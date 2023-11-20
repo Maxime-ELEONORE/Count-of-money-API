@@ -10,6 +10,9 @@ const CoinGeckoService = {
     getTop100Cryptos: async () => {
         try {
             const response = await http.get(`${baseURL}/coins/markets`, {
+                headers: {
+                    'Authorization': `Bearer CG-Q1bJd5mxtq8WNGxEe1cRayem`
+                },
                 params: {
                     vs_currency: 'eur',
                     order: 'market_cap_desc',
