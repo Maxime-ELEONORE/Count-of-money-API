@@ -2815,3 +2815,627 @@
     Body: {}
     ------------------------------
     
+    ------------------------------
+    Time: 2023-11-20 15:13:19
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "14bb9f2f-ca8e-4a6a-8d7e-ea6c58fefbe4",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:13:20
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "dcf43347-622d-43a9-a774-b63e8d99504f",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:13:21
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "35641537-69a8-4da4-8595-7b1b3d302cff",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:13:22
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "850b1af3-a745-463a-bbc8-52ba4982323d",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:13:22
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "f3ec21b3-77c9-487c-b174-4604d7e5c06d",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:13:24
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "193be718-ae89-44d0-ade7-89fc0fede646",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:13:24
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "c926687f-afce-486a-a5f6-639cd7de8643",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:13:24
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "ae3c4e4a-215e-46b5-8957-73401460e653",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:13:26
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "87dc90f2-89b6-4b19-a625-b35cb0f0f6f6",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:13:27
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "53c1bd50-d5a3-4f61-b9e5-5a3f994fd913",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:13:32
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "5f8f58cd-cc66-48d6-8361-eeaa29cfa36d",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:13:33
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "5f564b5c-dca1-40e6-b4df-7f7d205ca56a",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:13:44
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "0db2af9f-4842-4428-b178-117ac1f635c4",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:13:46
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "a03bdb3a-e99a-4abb-b456-18c2a0957689",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:14:8
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "8555f79a-78d0-4392-9f18-3be02b0adb13",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:14:9
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "13bfb6f3-4ed5-4278-8f3e-3247a9ddff77",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:14:10
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "14ce1050-4f72-4f3e-969e-9d1cc81599e5",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:14:48
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "79f7a71d-8a49-4a09-876d-f643d8b7fbb1",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:14:49
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "a060ccbf-597f-449b-b683-8a6a3340ddef",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:14:50
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "c256c5bb-4b01-4f67-b0e6-acbeff657cd1",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:15:37
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "b587c508-580c-43a6-89e1-f59d7b035b1e",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:15:38
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "0fc72dd7-e938-4d53-a5fc-52bf85219658",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:15:39
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "1582c330-f15b-4ad1-847b-de90cfc19cf5",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:15:40
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "1a0d8b86-1d0a-4dca-b17c-a8a24295b619",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:15:40
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "3bf6ce34-b22c-4a09-b35a-5d48c2b06171",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:15:41
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "254d88e2-4e76-4387-a9d0-427e3f34258a",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:15:42
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "4d93c763-ac5f-44d7-8f97-8e97a20f5c8b",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:15:43
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "f5b1b6da-52dd-4efe-bad5-13c1af6a1dce",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:15:44
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "1fbab5b5-9da7-43bf-8184-c9344d903ef2",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:15:44
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "8b637b56-8851-4dd6-a870-2740e767ca92",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:15:45
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "6cdcb72b-e49e-444c-a35d-fdb1edfeb531",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:15:56
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "1c91650c-9451-4b44-a6c3-f4d7cc51c988",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:15:57
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "f4116378-f0f8-44fd-841c-a32da8989c52",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:15:58
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "3e355ec0-beb4-402a-9f65-fb5f2cb18406",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:15:58
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "2bcd1ba5-4741-41f0-99f6-aa728006fb2c",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:15:59
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "da3ff0a6-45e3-4f9b-a56a-b3bc7d511e94",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:16:51
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "39aca732-1869-4aa7-8112-c1d4a2e3cd6a",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:16:53
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "02349316-c242-4426-adc8-e719d4f9b67f",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    
+    ------------------------------
+    Time: 2023-11-20 15:16:53
+    Request Method: GET
+    Request URL: /api/cryptos/admin/top100
+    Headers: {
+  "authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ0aW1lX21hbmFnZXJfYXBpIiwiZXhwIjoxNzAxODU0NzIyLCJpYXQiOjE2OTk0MzU1MjIsImlzcyI6InRpbWVfbWFuYWdlcl9hcGkiLCJqdGkiOiI3ODgyYmZlNC03YWU1LTQ4MjctOWE2Mi00ZGJjZjYyODY2NDkiLCJuYmYiOjE2OTk0MzU1MjEsInN1YiI6ImEyMTQ0NjA1LWM5ZjctNDJmMi1iYTM1LWZhMTY4YTdkZmUxNSIsInR5cCI6ImFjY2VzcyJ9.DgKEwp3_MOA8I5gcN3SZ5AUg9H1W5GRf3M1ZNPVqZ-XqAr7MMh-QL5Dc3UODbcx1jdxGgtJ1fVRVdQ160TCHjQ",
+  "user-agent": "PostmanRuntime/7.35.0",
+  "accept": "*/*",
+  "postman-token": "de605b04-c14d-4ae3-b2fb-d791d58163d5",
+  "host": "localhost:4000",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+    Body: {}
+    ------------------------------
+    

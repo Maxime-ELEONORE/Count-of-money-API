@@ -32,7 +32,7 @@ services:
     ports:
       - "4000:4000"
     environment:
-      COINGUEKO_API_KEY: CG-Q1bJd5mxtq8WNGxEe1cRayem
+      COIN_GUEKO_API_KEY: CG-Q1bJd5mxtq8WNGxEe1cRayem
       DB_URI: mongodb://admin:pass@mongodb:27017
       DB_HOST: mongo
       DB_PORT: 27017
