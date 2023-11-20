@@ -24,8 +24,6 @@ app.use(AuthRouter);
 app.use('/users', UserRouter);
 app.use('/cryptos', CryptoRouter);
 
-const response = await CoinGeckoService.getTop100Cryptos()
-console.log(response);
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 });

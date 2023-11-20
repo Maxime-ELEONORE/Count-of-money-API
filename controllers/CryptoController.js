@@ -1,4 +1,5 @@
 import Crypto from '../models/Crypto.js';
+import CoinGeckoService from '../services/CoinGeckoService.js'
 
 const CryptoController = {
 
@@ -52,6 +53,25 @@ const CryptoController = {
         try {
             const cryptos = await Crypto.find({});
             res.status(200).json(cryptos);
+        } catch (error) {
+            res.status(500).json({ message: error.message });
+        }
+    },
+
+    async getTop100(req, res) {
+        try {
+            const response =  await CoinGeckoService.getTop100Cryptos();
+            res.status(200).send(response);
+        } catch (error) {
+            res.status(500).json({ message: error.message });
+        }
+    },
+
+    async getCryptoHistory(req, res) {
+        try {
+            const coinId = req.params.coinId;
+            const response = await CoinGeckoService.getCryptoHistory(coinId)
+            res.status(200).send(response);
         } catch (error) {
             res.status(500).json({ message: error.message });
         }
