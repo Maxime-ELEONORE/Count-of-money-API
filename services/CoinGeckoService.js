@@ -3,7 +3,7 @@ import rateLimit from 'axios-rate-limit';
 
 const baseURL = 'https://api.coingecko.com/api/v3';
 
-const http = rateLimit(axios.create(), { maxRequests: 3, perMilliseconds: 60000})
+const http = rateLimit(axios.create(), { maxRequests: 30, perMilliseconds: 60000, maxRPS: 0.5})
 
 const CoinGeckoService = {
 
@@ -11,7 +11,7 @@ const CoinGeckoService = {
         try {
             const response = await http.get(`${baseURL}/coins/markets`, {
                 headers: {
-                    'Authorization': `Bearer CG-Q1bJd5mxtq8WNGxEe1cRayem`
+                    'x-cg-demo-api-key': process.env.COIN_GUEKO_API_KEY
                 },
                 params: {
                     vs_currency: 'eur',
@@ -31,6 +31,9 @@ const CoinGeckoService = {
     getCryptoHistory: async (coinId, days = 30) => {
         try {
             const response = await http.get(`${baseURL}/coins/${coinId}/market_chart`, {
+                headers: {
+                    'x-cg-demo-api-key': process.env.COIN_GUEKO_API_KEY
+                },
                 params: {
                     vs_currency: 'eur',
                     days: days
@@ -45,7 +48,10 @@ const CoinGeckoService = {
 
     getCryptoDetails: async (coinId) => {
         try {
-            const response = await http.get(`${baseURL}/coins/${coinId}`);
+            const response = await http.get(`${baseURL}/coins/${coinId}`,{
+            headers: {
+                'x-cg-demo-api-key': process.env.COIN_GUEKO_API_KEY
+            }});
             return response.data;
         } catch (error) {
             console.error(`Error fetching details for ${coinId}:`, error);
