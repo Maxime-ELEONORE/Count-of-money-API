@@ -1,12 +1,15 @@
 import axios from 'axios';
+import rateLimit from 'axios-rate-limit';
 
 const baseURL = 'https://api.coingecko.com/api/v3';
+
+const http = rateLimit(axios.create(), { maxRequests: 3, perMilliseconds: 60000, maxRPS: 0.5 })
 
 const CoinGeckoService = {
 
     getTop100Cryptos: async () => {
         try {
-            const response = await axios.get(`${baseURL}/coins/markets`, {
+            const response = await http.get(`${baseURL}/coins/markets`, {
                 params: {
                     vs_currency: 'eur',
                     order: 'market_cap_desc',
@@ -24,7 +27,7 @@ const CoinGeckoService = {
 
     getCryptoHistory: async (coinId, days = 30) => {
         try {
-            const response = await axios.get(`${baseURL}/coins/${coinId}/market_chart`, {
+            const response = await http.get(`${baseURL}/coins/${coinId}/market_chart`, {
                 params: {
                     vs_currency: 'eur',
                     days: days
@@ -39,7 +42,7 @@ const CoinGeckoService = {
 
     getCryptoDetails: async (coinId) => {
         try {
-            const response = await axios.get(`${baseURL}/coins/${coinId}`);
+            const response = await http.get(`${baseURL}/coins/${coinId}`);
             return response.data;
         } catch (error) {
             console.error(`Error fetching details for ${coinId}:`, error);
