@@ -7,6 +7,7 @@ import UserRouter from './routers/UserRouter.js';
 import AuthRouter from './routers/AuthRouter.js';
 import CryptoRouter from './routers/CryptoRouter.js';
 import logger from './middlewares/Logger.js';
+import CoinGeckoService from './services/CoinGeckoService.js'
 
 const app = express();
 const port = 4000;
@@ -23,6 +24,8 @@ app.use(AuthRouter);
 app.use('/users', UserRouter);
 app.use('/cryptos', CryptoRouter);
 
+const response = await CoinGeckoService.getTop100Cryptos()
+console.log(response);
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 });
