@@ -15,9 +15,9 @@ mongoose.connect(process.env.DB_URI)
     .then(() => console.log('Connection to MongoDB: SUCCESS !'))
     .catch(err => console.error('Connection to MongoDB: FAILED...', err));
 
-app.use(logger);
 app.use(cors());
 app.use(express.json());
+app.use(logger);
 
 app.use(AuthRouter);
 app.use('/users', UserRouter);
