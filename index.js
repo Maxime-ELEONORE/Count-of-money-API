@@ -20,9 +20,9 @@ app.use(cors());
 app.use(express.json());
 app.use(logger);
 
-app.use(AuthRouter);
-app.use('/users', UserRouter);
-app.use('/cryptos', CryptoRouter);
+app.use('/api', AuthRouter);
+app.use('/api/users', UserRouter);
+app.use('/api/cryptos', CryptoRouter);
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
