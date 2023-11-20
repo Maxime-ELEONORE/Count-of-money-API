@@ -6,7 +6,8 @@ const AuthController = {
 
     async register(req, res) {
         try {    
-            const user = new User(req.body);
+            let user = new User(req.body);
+            user.role = 'user';
             await user.save();    
             res.status(201).send({ user, message: 'Inscription réussie' });
         } catch (error) {
