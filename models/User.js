@@ -24,7 +24,7 @@ const userSchema = new mongoose.Schema({
         required: true,
         validate: {
             validator: (value) => validator.isStrongPassword(value, {
-                minLength: 8,
+                minLength: 12,
                 minLowercase: 1,
                 minUppercase: 1,
                 minNumbers: 1,
@@ -38,6 +38,9 @@ const userSchema = new mongoose.Schema({
         required: true,
         enum: ['user', 'admin'],
         default: 'user'
+    },
+    googleId: {
+        type: String
     }
 }, {
     timestamps: true

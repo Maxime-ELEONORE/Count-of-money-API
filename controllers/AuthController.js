@@ -1,6 +1,7 @@
 import User from '../models/User.js';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
+import passport from 'passport'
 
 const AuthController = {
 
@@ -26,7 +27,7 @@ const AuthController = {
             if (!isMatch) {
                 return res.status(401).send({ message: 'Authentification échouée' });
             }
-            const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+            const token = jwt.sign({ userId: user._id, role: user.role }, process.env.JWT_SECRET, { expiresIn: '1h' });
             res.send({ message: 'Authentification réussie', token });
         } catch (error) {
             res.status(500).send(error);
@@ -35,6 +36,23 @@ const AuthController = {
 
     async logout(req, res) {
         res.send({ message: 'Déconnexion réussie' });
+    },
+
+    googleAuth: passport.authenticate('google', { scope: ['profile', 'email'] }),
+
+    googleAuthCallback(req, res, next) {
+        passport.authenticate('google', { failureRedirect: '/login' }, (err, user, info) => {
+            if (err) { return next(err); }
+            if (!user) { return res.redirect('/login'); }
+
+            req.logIn(user, function(err) {
+                if (err) { return next(err); }
+                // Générer le token JWT pour l'utilisateur
+                const token = jwt.sign({ userId: user._id, role: user.role }, process.env.JWT_SECRET, { expiresIn: '1h' });
+                // Redirection vers une page de succès ou le profil de l'utilisateur avec le token
+                return res.redirect('/profile?token=' + token);
+            });
+        })(req, res, next);
     }
 };
 
