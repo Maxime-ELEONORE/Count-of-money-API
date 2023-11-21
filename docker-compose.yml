@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   mongodb:
-    image: mongo:latest
+    image: mongo:4.4
     container_name: mongodb
     restart: always
     environment:
@@ -41,6 +41,7 @@ services:
       DB_PASS: pass
     depends_on:
       - mongodb
+
   watchtower:
     image: containrrr/watchtower
     volumes:
@@ -48,6 +49,8 @@ services:
     environment:
       - WATCHTOWER_POLL_INTERVAL=${WATCHTOWER_POLL_INTERVAL}
     restart: unless-stopped
+
+
 
 volumes:
   mongodb_data:

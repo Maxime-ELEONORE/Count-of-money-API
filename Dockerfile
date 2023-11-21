@@ -10,8 +10,14 @@ COPY package*.json ./
 # Install app dependencies
 RUN npm ci
 
+# Install ESLint as a development dependency
+RUN npm install eslint --save-dev
+
 # Copy the application code into the container
 COPY . .
+
+# Run ESLint to check the code
+RUN npx eslint .
 
 # Expose the port that the app will run on
 EXPOSE 4000
