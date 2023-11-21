@@ -6,7 +6,7 @@ async function initializeAdminUser() {
     if (!adminExists) {
       const adminUser = new User({
         username: 'admin',
-        password: 'P@ssw0rd',
+        password: 'P@ssw0rdP@ssw0rd',
         email: "admin@mail.fr",
         role: 'admin'
       });
