@@ -21,4 +21,4 @@ jobs:
         username: alexrandr
         password: dckr_pat_9N-4JJzl83fffaQQxjLxGttogzA
     - name: Docker Push GH Action
-      run: docker compose -f docker-compose.prod.yml push
+      run: docker compose -f docker-compose.yml push
