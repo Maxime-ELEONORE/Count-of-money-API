@@ -41,6 +41,13 @@ services:
       DB_PASS: pass
     depends_on:
       - mongodb
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - WATCHTOWER_POLL_INTERVAL=${WATCHTOWER_POLL_INTERVAL}
+    restart: unless-stopped
 
 volumes:
   mongodb_data:
