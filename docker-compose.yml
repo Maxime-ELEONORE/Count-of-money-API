@@ -31,16 +31,15 @@ services:
       dockerfile: Dockerfile
     ports:
       - "4000:4000"
-    environment:
-      COIN_GUEKO_API_KEY: CG-Q1bJd5mxtq8WNGxEe1cRayem
-      MONGODB_URI: mongodb://admin:pass@mongodb:27017
-      DB_HOST: mongo
-      DB_PORT: 27017
-      DB_USER: admin
-      DB_PASS: pass
-      GOOGLE_CLIENT_ID: 144285600316-9dt1f372ilaedt4a5p65eh1ir7oaimaq.apps.googleusercontent.com
-      GOOGLE_CLIENT_SECRET: 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
-      SESSION_SECRET: super_la_session_secrete
+#    environment:
+#      COIN_GUEKO_API_KEY: CG-Q1bJd5mxtq8WNGxEe1cRayem
+#      MONGODB_URI: mongodb://admin:pass@mongodb:27017
+#      GOOGLE_CLIENT_ID: 144285600316-9dt1f372ilaedt4a5p65eh1ir7oaimaq.apps.googleusercontent.com
+#      GOOGLE_CLIENT_SECRET: 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
+#      SESSION_SECRET: super_la_session_secrete
+#      PORT: 4000
+    env_file:
+      -
 
     depends_on:
       - mongodb
