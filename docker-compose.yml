@@ -39,7 +39,7 @@ services:
 #      SESSION_SECRET: super_la_session_secrete
 #      PORT: 4000
     env_file:
-      -
+      - ".env"
 
     depends_on:
       - mongodb
