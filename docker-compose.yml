@@ -26,7 +26,6 @@ services:
       - mongodb
 
   express-app:
-    image: alexrandr/express-app:latest
     build:
       context: .
       dockerfile: Dockerfile
@@ -34,11 +33,15 @@ services:
       - "4000:4000"
     environment:
       COIN_GUEKO_API_KEY: CG-Q1bJd5mxtq8WNGxEe1cRayem
-      DB_URI: mongodb://admin:pass@mongodb:27017
+      MONGODB_URI: mongodb://admin:pass@mongodb:27017
       DB_HOST: mongo
       DB_PORT: 27017
       DB_USER: admin
       DB_PASS: pass
+      GOOGLE_CLIENT_ID: 144285600316-9dt1f372ilaedt4a5p65eh1ir7oaimaq.apps.googleusercontent.com
+      GOOGLE_CLIENT_SECRET: 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
+      SESSION_SECRET: super_la_session_secrete
+
     depends_on:
       - mongodb
 
