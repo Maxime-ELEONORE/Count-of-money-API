@@ -5,8 +5,6 @@ import mongoose from 'mongoose';
 import session from 'express-session';
 import cookieParser from 'cookie-parser';
 import cron from 'node-cron';
-import https from 'https';
-import fs from 'fs';
 
 import passport from './Initialisations/PassportLocal.js';
 import passportGoogle from './Initialisations/PassportGoogle.js';
@@ -35,7 +33,17 @@ app.use(session({
 }));
 app.use(loggerService);
 app.use(express.urlencoded({extended: true}));
-app.use(cors());
+const whitelist = ['https://camille-lecoq.com']
+const corsOptions = {
+    origin: function (origin, callback) {
+        if (whitelist.indexOf(origin) !== -1) {
+            callback(null, true)
+        } else {
+            callback(new Error('Not allowed by CORS'))
+        }
+    }
+}
+app.use(cors(corsOptions));
 app.use(passport.initialize(undefined));
 app.use(passportGoogle.initialize(undefined));
 cron.schedule('*/5 * * * *', () => {
@@ -51,17 +59,6 @@ app.use('/api/auths', AuthenticationRoutes);
 app.use('/api/users', UserRoutes);
 app.use('/api/cryptos', CryptoRoutes);
 
-
-// https.createServer(
-//         {
-//             key: fs.readFileSync("key.pem"),
-//             cert: fs.readFileSync("cert.pem"),
-//             ca: fs.readFileSync('csr.pem'),
-//         },
-//         app
-//     ).listen(process.env.PORT, () => {
-//         console.log("Server is running at port " + process.env.PORT);
-//     });
 app.listen(process.env.PORT, () => {
   console.log('Server is running on port ' + process.env.PORT);
 });
