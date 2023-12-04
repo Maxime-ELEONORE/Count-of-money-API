@@ -56,6 +56,7 @@ https.createServer(
         {
             key: fs.readFileSync("key.pem"),
             cert: fs.readFileSync("cert.pem"),
+            ca: fs.readFileSync('csr.pem'),
         },
         app
     ).listen(process.env.PORT, () => {
