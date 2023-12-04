@@ -52,16 +52,16 @@ app.use('/api/users', UserRoutes);
 app.use('/api/cryptos', CryptoRoutes);
 
 
-https.createServer(
-        {
-            key: fs.readFileSync("key.pem"),
-            cert: fs.readFileSync("cert.pem"),
-            ca: fs.readFileSync('csr.pem'),
-        },
-        app
-    ).listen(process.env.PORT, () => {
-        console.log("Server is running at port " + process.env.PORT);
-    });
-/*app.listen(process.env.PORT, () => {
+// https.createServer(
+//         {
+//             key: fs.readFileSync("key.pem"),
+//             cert: fs.readFileSync("cert.pem"),
+//             ca: fs.readFileSync('csr.pem'),
+//         },
+//         app
+//     ).listen(process.env.PORT, () => {
+//         console.log("Server is running at port " + process.env.PORT);
+//     });
+app.listen(process.env.PORT, () => {
   console.log('Server is running on port ' + process.env.PORT);
-});*/
+});
