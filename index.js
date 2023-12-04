@@ -5,6 +5,8 @@ import mongoose from 'mongoose';
 import session from 'express-session';
 import cookieParser from 'cookie-parser';
 import cron from 'node-cron';
+import https from 'https';
+import fs from 'fs';
 
 import passport from './Initialisations/PassportLocal.js';
 import passportGoogle from './Initialisations/PassportGoogle.js';
@@ -29,23 +31,36 @@ app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
+  cookie: {httpOnly: false, secure: true}
 }));
 app.use(loggerService);
 app.use(express.urlencoded({extended: true}));
 app.use(cors());
-app.use(passport.initialize());
-app.use(passportGoogle.initialize());
+app.use(passport.initialize(undefined));
+app.use(passportGoogle.initialize(undefined));
 cron.schedule('*/5 * * * *', () => {
   console.log('Exécution de la tâche cron pour mettre à jour l’historique des cryptos');
-  CryptosJobs.updateHistory()
+  CryptosJobs.updateCryptoDatas()
       .then(() => console.log('Mise a jour des cryptos terminer'))
       .catch(() => console.log('Erreur lors de la mise a jours des historiques des cryptos'));
 });
+CryptosJobs.updateCryptoDatas().then(() => console.log("Crypto datas updated"))
+    .catch(() => console.log("error fetching crypto datas"))
 
 app.use('/api/auths', AuthenticationRoutes);
 app.use('/api/users', UserRoutes);
 app.use('/api/cryptos', CryptoRoutes);
 
-app.listen(process.env.PORT, () => {
+
+https.createServer(
+        {
+            key: fs.readFileSync("key.pem"),
+            cert: fs.readFileSync("cert.pem"),
+        },
+        app
+    ).listen(process.env.PORT, () => {
+        console.log("Server is running at port " + process.env.PORT);
+    });
+/*app.listen(process.env.PORT, () => {
   console.log('Server is running on port ' + process.env.PORT);
-});
+});*/

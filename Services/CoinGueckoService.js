@@ -25,7 +25,7 @@ const CoinGeckoService = {
     }
   },
 
-  getCryptoHistory: async (coinId, days = 30) => {
+  getCryptoHistory: async (coinId, days = 'max') => {
     try {
       const response = await axios.get(`${baseURL}/coins/${coinId}/market_chart`, {
         headers: {
@@ -42,6 +42,28 @@ const CoinGeckoService = {
       throw error;
     }
   },
+  fetchMarketData: async (coinId) => {
+    try {
+      const response = await axios.get(`${baseURL}/coins/${coinId}`);
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching market data from CoinGecko:", error);
+      return null;
+    }
+  },
+
+  fetchCandlestickData: async (coinID, days = 'max') => {
+    try {
+      const response = await axios.get(`${baseURL}/coins/${coinID}/ohlc`, {
+        params: { vs_currency: 'eur', days }
+      });
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching candlestick data from CoinGecko:", error);
+      return null;
+    }
+  },
+
 };
 
 export default CoinGeckoService;

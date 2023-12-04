@@ -17,10 +17,6 @@ const cryptoSchema = new mongoose.Schema({
     trim: true,
   },
   image: String,
-  history: [{
-    date: Date,
-    value: Number,
-  }],
 }, {
   timestamps: true,
 });
