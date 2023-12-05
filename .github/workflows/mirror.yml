@@ -18,6 +18,10 @@ jobs:
           git config --global user.name 'Maxime Eleonore'
           git config --global user.email 'maxime.eleonore@epitech.eu'
 
+      - name: Create API Directory if not Exists
+        run: |
+          mkdir -p api
+
       - name: Remove Unwanted Files and Folders
         run: |
           rm -rf .github node_modules package-lock.json
@@ -26,9 +30,10 @@ jobs:
         run: |
           git remote add target https://github.com/EpitechMscProPromo2025/T-WEB-700-LIL_9.git
           git fetch target
+          git subtree add --prefix api target main
           git push --force target `git subtree split --prefix api main`:main
 
     env:
-      GITHUB_TOKEN: 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
+      GITHUB_TOKEN: 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
 
           
