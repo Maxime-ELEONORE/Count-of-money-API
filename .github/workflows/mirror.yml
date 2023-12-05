@@ -34,6 +34,6 @@ jobs:
           git push --force target `git subtree split --prefix api main`:main
 
     env:
-      GITHUB_TOKEN: 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
+      GITHUB_TOKEN: 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
 
           
