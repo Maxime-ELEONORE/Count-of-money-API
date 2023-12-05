@@ -1,4 +1,4 @@
-name: Copier le Repository Complet dans le sous-dossier /web
+name: Copier le Repository Complet dans le sous-dossier /api
 
 on: push
 
@@ -22,7 +22,7 @@ jobs:
     - name: Cloner le dépôt distant
       run: git clone git@github.com:EpitechMscProPromo2025/T-WEB-700-LIL_9.git temp_repo
 
-    - name: Copier le code source dans le sous-dossier /web du dépôt distant
+    - name: Copier le code source dans le sous-dossier /api du dépôt distant
       run: |
         # Créer un sous-dossier /api s'il n'existe pas
         mkdir -p temp_repo/api
