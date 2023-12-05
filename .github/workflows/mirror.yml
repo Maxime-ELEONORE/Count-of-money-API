@@ -1,4 +1,4 @@
-name: Mirror to Epitech Repository
+name: Copier le Repository Complet dans le sous-dossier /api
 
 on:
   push:
@@ -6,34 +6,45 @@ on:
       - main
 
 jobs:
-  mirror:
+  copy-repo:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Source Repository
-        uses: actions/checkout@v2
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      with:
+        ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Configure Git
-        run: |
-          git config --global user.name 'Maxime Eleonore'
-          git config --global user.email 'maxime.eleonore@epitech.eu'
+    - name: Setup SSH
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
 
-      - name: Create API Directory if not Exists
-        run: |
-          mkdir -p api
+    - name: Cloner le dépôt distant
+      run: git clone git@github.com:EpitechMscProPromo2025/T-WEB-700-LIL_9.git temp_repo
 
-      - name: Remove Unwanted Files and Folders
-        run: |
-          rm -rf .github node_modules package-lock.json
+    - name: Copier le code source dans le sous-dossier /api du dépôt distant
+      run: |
+        # Créer un sous-dossier /api s'il n'existe pas
+        mkdir -p temp_repo/api
+        # Copier tout sauf le dossier .git et .github/workflows dans le sous-dossier /api
+        rsync -av --exclude '.git' --exclude '.github/workflows/' . temp_repo/api/
 
-      - name: Mirror to Target Repository
-        run: |
-          git remote add target https://github.com/EpitechMscProPromo2025/T-WEB-700-LIL_9.git
-          git fetch target
-          git subtree add --prefix api target main
-          git push --force target `git subtree split --prefix api main`:main
+    - name: Configurer l'utilisateur Git
+      run: |
+        git config --global user.email "maxime.eleonore@epitech.eu"
+        git config --global user.name "Maxime ELEONORE"
 
-    env:
-      GITHUB_TOKEN: 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
+    - name: Commit et Push les changements
+      run: |
+        cd temp_repo
+        git add api
+        COMMIT_MESSAGE=$(git log -1 --pretty=format:"%s")
+        git commit -m "Mise à jour du sous-dossier /api: ${COMMIT_MESSAGE}"
+        git push origin main
 
-          
+    - name: Cleanup SSH
+      if: always()
+      run: rm -f ~/.ssh/id_rsa
