@@ -20,11 +20,10 @@ jobs:
 
       - name: Prepare Files for Mirroring
         run: |
-          mkdir temp_dir
-          mv * .[^.]* temp_dir
-          rm -rf temp_dir/.github temp_dir/node_modules temp_dir/package-lock.json
           mkdir api
-          mv temp_dir/* api
+          shopt -s extglob
+          mv !(api|.github|node_modules|package-lock.json|.git) api/
+          shopt -u extglob
 
       - name: Mirror to Target Repository
         run: |
