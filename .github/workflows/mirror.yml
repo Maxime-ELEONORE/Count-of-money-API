@@ -1,4 +1,3 @@
-
 name: Mirror to Epitech Repository
 
 on:
@@ -14,15 +13,26 @@ jobs:
       - name: Checkout Source Repository
         uses: actions/checkout@v2
 
-      - name: Mirror Repository
-        uses: yesolutions/mirror-action@v0.7.0
-        with:
-          REMOTE_NAME: 'epitech' # Nom du remote pour référencer le dépôt cible
-          REMOTE: 'https://github.com/EpitechMscProPromo2025/T-WEB-700-LIL_9.git' # URL du dépôt cible
-          GIT_REF: 'refs/heads/main' # La référence à pousser (par défaut, la branche actuelle)
-          PUSH_ALL_REFS: false # Changer à true si vous voulez pousser toutes les références
-          GIT_PUSH_ARGS: '--no-verify --force' # Arguments de push (force pour écraser les changements)
-          GIT_PASSWORD: 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 # Le token GitHub stocké dans les secrets
+      - name: Setup Git Config
+        run: |
+          git config user.name "VotreNomDUtilisateurGitHub"
+          git config user.email "VotreEmailGitHub"
 
+      - name: Prepare Files for Mirroring
+        run: |
+          mkdir temp_dir
+          mv * .[^.]* temp_dir
+          rm -rf temp_dir/.github temp_dir/node_modules temp_dir/package-lock.json
+          mkdir api
+          mv temp_dir/* api
 
-          
+      - name: Mirror to Target Repository
+        run: |
+          git remote add target https://github.com/EpitechMscProPromo2025/T-WEB-700-LIL_9.git
+          git fetch target
+          git add .
+          git commit -m "Mirroring repository"
+          git push --force target main:main
+
+    env:
+      GITHUB_TOKEN: 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
