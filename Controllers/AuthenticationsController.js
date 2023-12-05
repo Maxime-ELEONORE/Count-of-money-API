@@ -5,7 +5,6 @@ import jwt from 'jsonwebtoken';
 const AuthController = {
   async register(req, res, next) {
     try {
-      console.log('oui');
       const {email, password, username} = req.body;
       const userExists = await User.findOne({email});
       if (userExists) {
