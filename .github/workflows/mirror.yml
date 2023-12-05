@@ -1,0 +1,34 @@
+name: Mirror to Epitech Repository
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Repository
+        uses: actions/checkout@v2
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'Maxime Eleonore'
+          git config --global user.email 'maxime.eleonore@epitech.eu'
+
+      - name: Remove Unwanted Files and Folders
+        run: |
+          rm -rf .github node_modules package-lock.json
+
+      - name: Mirror to Target Repository
+        run: |
+          git remote add target https://github.com/EpitechMscProPromo2025/T-WEB-700-LIL_9.git
+          git fetch target
+          git push --force target `git subtree split --prefix api main`:main
+
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+          
