@@ -29,6 +29,6 @@ jobs:
           git push --force target `git subtree split --prefix api main`:main
 
     env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: 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
 
           
