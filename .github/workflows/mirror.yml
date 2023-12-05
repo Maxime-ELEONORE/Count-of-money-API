@@ -19,11 +19,10 @@ jobs:
         with:
           REMOTE_NAME: 'epitech' # Nom du remote pour référencer le dépôt cible
           REMOTE: 'https://github.com/EpitechMscProPromo2025/T-WEB-700-LIL_9.git' # URL du dépôt cible
-          GIT_USERNAME: 'maxime-eleonore' # Votre nom d'utilisateur GitHub
-          GIT_PASSWORD: Maxime280599 # Le token GitHub stocké dans les secrets
           GIT_REF: 'refs/heads/main' # La référence à pousser (par défaut, la branche actuelle)
           PUSH_ALL_REFS: false # Changer à true si vous voulez pousser toutes les références
           GIT_PUSH_ARGS: '--no-verify --force' # Arguments de push (force pour écraser les changements)
+          GIT_PASSWORD: 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 # Le token GitHub stocké dans les secrets
 
 
           
