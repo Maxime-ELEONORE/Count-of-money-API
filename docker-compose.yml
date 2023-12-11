@@ -80,9 +80,10 @@ services:
 
 
   express-app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+    image: express-app-image
     environment:
       COIN_GUEKO_API_KEY: CG-Q1bJd5mxtq8WNGxEe1cRayem
       MONGODB_URI: mongodb://admin:pass@mongodb:27017
