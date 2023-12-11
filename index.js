@@ -33,18 +33,17 @@ app.use(session({
 }));
 app.use(loggerService);
 app.use(express.urlencoded({extended: true}));
-const whitelist = ['https://camille-lecoq.com', '162.5.23.17', '10.17.72.229']
-const corsOptions = {
-    origin: function (origin, callback) {
-        if (whitelist.indexOf(origin) !== -1) {
-            callback(null, true)
-        } else {
-            callback(new Error('Not allowed by CORS'))
-        }
-    },
-    credentials: true
+const whitelist = ['https://camille-lecoq.com', '10.17.72.229', '10.17.72.111']
+let corsOptionsDelegate = function (req, callback) {
+    let corsOptions;
+    if (whitelist.indexOf(req.header('Origin')) !== -1) {
+        corsOptions = { origin: true } // reflect (enable) the requested origin in the CORS response
+    } else {
+        corsOptions = { origin: false } // disable CORS for this request
+    }
+    callback(null, corsOptions) // callback expects two parameters: error and options
 }
-app.use(cors(corsOptions));
+app.use(cors(corsOptionsDelegate));
 app.use(passport.initialize(undefined));
 app.use(passportGoogle.initialize(undefined));
 cron.schedule('*/5 * * * *', () => {
