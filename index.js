@@ -33,7 +33,7 @@ app.use(session({
 }));
 app.use(loggerService);
 app.use(express.urlencoded({extended: true}));
-const whitelist = ['https://camille-lecoq.com', '10.17.72.229', '10.17.72.111', '10.17.72.138', "localhost"]
+const whitelist = ['https://camille-lecoq.com', '10.17.72.229', '10.17.72.111', '10.17.72.138', "http://localhost:3000"]
 let corsOptionsDelegate = function (req, callback) {
     let corsOptions;
     if (whitelist.indexOf(req.header('Origin')) !== -1) {
