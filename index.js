@@ -33,7 +33,7 @@ app.use(session({
 }));
 app.use(loggerService);
 app.use(express.urlencoded({extended: true}));
-const whitelist = ['https://camille-lecoq.com', 'localhost']
+const whitelist = ['https://camille-lecoq.com', '162.5.23.17']
 const corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.indexOf(origin) !== -1) {
@@ -44,7 +44,7 @@ const corsOptions = {
     },
     credentials: true
 }
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(passport.initialize(undefined));
 app.use(passportGoogle.initialize(undefined));
 cron.schedule('*/5 * * * *', () => {
