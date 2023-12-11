@@ -84,6 +84,8 @@ services:
 #      context: .
 #      dockerfile: Dockerfile
     image: express-app-image
+    deploy:
+      replicas: 3
     environment:
       COIN_GUEKO_API_KEY: CG-Q1bJd5mxtq8WNGxEe1cRayem
       MONGODB_URI: mongodb://admin:pass@mongodb:27017
