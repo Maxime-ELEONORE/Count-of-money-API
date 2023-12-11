@@ -16,6 +16,7 @@ import loggerService from './Services/LoggerService.js';
 import AuthenticationRoutes from './Routes/AuthenticationRoutes.js';
 import UserRoutes from './Routes/UserRoutes.js';
 import CryptoRoutes from './Routes/CryptoRoutes.js';
+import CrytoDatasRoutes from './Routes/CryptoDatasRoutes.js'
 
 const app = express();
 mongoose.connect(process.env.MONGODB_URI)
@@ -59,6 +60,7 @@ CryptosJobs.updateCryptoDatas().then(() => console.log("Crypto datas updated"))
 app.use('/api/auths', AuthenticationRoutes);
 app.use('/api/users', UserRoutes);
 app.use('/api/cryptos', CryptoRoutes);
+app.use('/api/cryptodatas', CrytoDatasRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log('Server is running on port ' + process.env.PORT);

@@ -76,7 +76,7 @@ const CryptoDataController = {
             let result = [];
             const coinIds = req.body.coinIds.split(",");
             for (let coinId in coinIds){
-                const datas = CryptoData.findOne({coinID: coinId})
+                const datas = await CryptoData.findOne({coinID: coinId})
                 result.append(datas);
             }
             res.status(200).send(result)
