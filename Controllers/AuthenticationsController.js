@@ -30,7 +30,7 @@ const AuthController = {
               userRole: user.role,
             }, process.env.JWT_SECRET, {expiresIn: '1h'});
             res.cookie('jwt', token,
-                {httpOnly: true, sameSite: 'None', secure: true});
+                {httpOnly: true, sameSite: 'None', secure: true, domain: '.camille-lecoq.com'});
             return res.status(200).json({message: 'Logged in successfully'});
           });
         })(req, res, next);
