@@ -29,3 +29,13 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: tydaks/express-app-image:latest
+      - name: SSH and Deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: api.camille-lecoq.com
+          username: tydaks
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd Count-of-money-API
+            git pull
+            docker stack deploy -c docker-compose.yml countofmoney
