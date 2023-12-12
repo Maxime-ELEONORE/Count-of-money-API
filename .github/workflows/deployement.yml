@@ -39,4 +39,5 @@ jobs:
             cd Count-of-money-API
             git config pull.rebase false 
             git pull origin main
-            docker stack deploy -c docker-compose.yml countofmoney
+            docker compose down 
+            docker compose up --build
