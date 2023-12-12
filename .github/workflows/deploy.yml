@@ -4,13 +4,11 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'Dockerfile'
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: startsWith(github.event.head_commit.message, '[deploy]')
+    #if: startsWith(github.event.head_commit.message, '[deploy]')
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
