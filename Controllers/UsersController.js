@@ -38,7 +38,11 @@ const UserController = {
       if (!user) {
         return res.status(404).json({message: 'User not found'});
       }
-      const allowedUpdateFields = ['username', 'password'];
+      let allowedUpdateFields = []
+      if (req.user.userRole === 'admin')
+        allowedUpdateFields = ['username', 'password', 'role', 'email'];
+      else
+        allowedUpdateFields = ['username', 'password', 'email'];
       const updates = Object.keys(req.body);
       const isValidOperation = updates.
           every((update) => allowedUpdateFields.
