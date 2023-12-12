@@ -1,53 +1,3 @@
-#version: '3.8'
-#
-#services:
-#  mongodb:
-#    image: mongo:latest
-#    container_name: mongodb
-##    restart: always
-#    environment:
-#      MONGO_INITDB_ROOT_USERNAME: admin
-#      MONGO_INITDB_ROOT_PASSWORD: pass
-#    ports:
-#      - "27017:27017"
-#    volumes:
-#      - mongodb_data:/data/db
-#
-#  mongo-express:
-#    image: mongo-express
-#    restart: always
-#    ports:
-#      - 8081:8081
-#    environment:
-#      ME_CONFIG_MONGODB_SERVER: mongodb
-#      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
-#      ME_CONFIG_MONGODB_ADMINPASSWORD: pass
-#    depends_on:
-#      - mongodb
-#
-#  express-app:
-#    build:
-#      context: .
-#      dockerfile: Dockerfile
-#    ports:
-#      - "4000:4000"
-#    environment:
-#      COIN_GUEKO_API_KEY: CG-Q1bJd5mxtq8WNGxEe1cRayem
-#      MONGODB_URI: mongodb://admin:pass@mongodb:27017
-#      GOOGLE_CLIENT_ID: 144285600316-9dt1f372ilaedt4a5p65eh1ir7oaimaq.apps.googleusercontent.com
-#      GOOGLE_CLIENT_SECRET: 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
-#      SESSION_SECRET: super_la_session_secrete
-#      PORT: 4000
-#
-#    depends_on:
-#      - mongodb
-#
-#volumes:
-#  mongodb_data:
-#
-#networks:
-#  my_network:
-
 version: '3.8'
 
 services:
@@ -83,6 +33,9 @@ services:
     image: tydaks/express-app-image:latest
     deploy:
       replicas: 3
+      placement:
+        constraints:
+          - node.role == worker
     environment:
       COIN_GUEKO_API_KEY: CG-Q1bJd5mxtq8WNGxEe1cRayem
       MONGODB_URI: mongodb://admin:pass@mongodb:27017
