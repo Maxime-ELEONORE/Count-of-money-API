@@ -37,5 +37,5 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd Count-of-money-API
-            git pull
+            git pull origin main
             docker stack deploy -c docker-compose.yml countofmoney
