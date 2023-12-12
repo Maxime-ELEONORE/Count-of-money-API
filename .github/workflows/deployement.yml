@@ -19,10 +19,8 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
-          username: Tydaks
+          username: tydaks
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-      - name: Print secrets
-        run: echo ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v2
@@ -30,4 +28,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: Tydaks/express-app-image:latest
+          tags: tydaks/express-app-image:latest
