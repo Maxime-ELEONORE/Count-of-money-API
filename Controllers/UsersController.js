@@ -40,9 +40,9 @@ const UserController = {
       }
       let allowedUpdateFields = []
       if (req.user.userRole === 'admin')
-        allowedUpdateFields = ['username', 'password', 'role', 'email'];
+        allowedUpdateFields = [ 'username', 'password', 'role', 'email' ];
       else
-        allowedUpdateFields = ['username', 'password', 'email'];
+        allowedUpdateFields = [ 'username', 'password', 'email' ];
       const updates = Object.keys(req.body);
       const isValidOperation = updates.
           every((update) => allowedUpdateFields.
