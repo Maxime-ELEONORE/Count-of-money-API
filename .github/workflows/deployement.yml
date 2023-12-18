@@ -32,8 +32,8 @@ jobs:
       - name: SSH and Deploy
         uses: appleboy/ssh-action@master
         with:
-          host: api.camille-lecoq.com
-          username: tydaks
+          host: api2.camille-lecoq.com
+          username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd Count-of-money-API
