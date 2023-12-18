@@ -18,6 +18,7 @@ import UserRoutes from './Routes/UserRoutes.js';
 import CryptoRoutes from './Routes/CryptoRoutes.js';
 import CrytoDatasRoutes from './Routes/CryptoDatasRoutes.js'
 import KeywordRoutes from "./Routes/KeywordRoutes.js";
+import RssFeedsRoutes from './Routes/RssFeedsRoutes.js';
 
 const app = express();
 mongoose.connect(process.env.MONGODB_URI)
@@ -35,7 +36,7 @@ app.use(session({
 }));
 app.use(loggerService);
 app.use(express.urlencoded({extended: true}));
-const whitelist = ['https://camille-lecoq.com', '10.17.72.229', '10.17.72.111', '10.17.72.138', "http://localhost:3000"]
+/*const whitelist = ['https://camille-lecoq.com', '10.17.72.229', '10.17.72.111', '10.17.72.138', "http://localhost:3000"]
 const corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.indexOf(origin) !== -1) {
@@ -46,7 +47,7 @@ const corsOptions = {
     },
     credentials: true
 }
-app.use(cors(corsOptions));
+app.use(cors(corsOptions));*/
 app.use(passport.initialize(undefined));
 app.use(passportGoogle.initialize(undefined));
 cron.schedule('*/5 * * * *', () => {
@@ -63,6 +64,7 @@ app.use('/api/users', UserRoutes);
 app.use('/api/cryptos', CryptoRoutes);
 app.use('/api/cryptodatas', CrytoDatasRoutes);
 app.use('/api/keywords', KeywordRoutes);
+app.use('/api/articles', RssFeedsRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log('Server is running on port ' + process.env.PORT);
