@@ -62,7 +62,7 @@ const CryptoDataController = {
         }));
 
         await CryptoData.findOneAndUpdate(
-            { coinID },
+            {crypto: cryptoID},
             { $push: {
                 candlesticks4days: { $each: formattedCandlesticks4days },
                     candlesticks4hours: { $each: formattedCandlesticks4hours },
