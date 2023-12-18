@@ -74,9 +74,9 @@ const CryptoDataController = {
     async getDatas(req, res)  {
         try {
             let result = [];
-            const coinIds = req.body.coinIds.split(",");
-            for (let coinId in coinIds){
-                const datas = await CryptoData.findOne({coinID: coinId})
+            const cryptoIds = req.body.cryptoIds;
+            for (let cryptoId in cryptoIds){
+                const datas = await CryptoData.findOne({crypto: cryptoId}).populate('crypto')
                 result.append(datas);
             }
             res.status(200).send(result)

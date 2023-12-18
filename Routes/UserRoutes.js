@@ -13,4 +13,6 @@ router.post('/', UserMiddlewares.isAdmin, UserController.create);
 router.put('/:id', UserMiddlewares.isAuthorized, UserController.update);
 router.delete('/:id', UserMiddlewares.isAdmin, UserController.delete);
 router.get('/info/role', UserController.getUserRole);
+router.post('/add-crypto/:id', UserController.add_crypto_to_user);
+router.delete('/remove-crypto/:id', UserMiddlewares.isAuthorized, UserController.remove_crypto_from_user);
 export default router;

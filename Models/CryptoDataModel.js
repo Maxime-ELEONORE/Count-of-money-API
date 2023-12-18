@@ -12,9 +12,9 @@ const CandlestickSchema = new mongoose.Schema({
 }, { _id: false });
 
 const CryptoDataSchema = new mongoose.Schema({
-    coinID: {
-        type: String,
-        required: true
+    crypto: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Crypto',
     },
     symbol: String,
     name: String,

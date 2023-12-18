@@ -84,5 +84,30 @@ const UserController = {
       res.status(500).json({message: err.message});
     }
   },
+  add_crypto_to_user: async (req, res) => {
+    try {
+      const user = await User.findById(req.params.userId);
+      if (!user.cryptos.includes(req.body.cryptoId)) {
+        user.cryptos.push(req.body.cryptoId);
+        await user.save();
+        res.status(200).json("Crypto added to user.");
+      } else {
+        res.status(400).json("Crypto already exists for user.");
+      }
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  },
+
+  remove_crypto_from_user: async (req, res) => {
+    try {
+      const user = await User.findById(req.params.userId);
+      user.cryptos = user.cryptos.filter(cryptoId => cryptoId.toString() !== req.body.cryptoId);
+      await user.save();
+      res.status(200).json("Crypto removed from user.");
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  }
 };
 export default UserController;
