@@ -36,8 +36,10 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
+            docker stop $(docker ps -a -q)
+            docker rm $(docker ps -a -q)            
+            docker rmi $(docker images -q) -f
             cd Count-of-money-API
-            git config pull.rebase false 
             git pull origin main
             docker compose down 
             docker compose up -d --build
