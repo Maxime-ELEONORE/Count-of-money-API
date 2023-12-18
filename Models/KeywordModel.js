@@ -6,7 +6,11 @@ const keywordSchema = new mongoose.Schema({
         required: true,
         unique: true,
         trim: true
-    }
+    },
+    userIds: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    }]
 });
 
 keywordSchema.pre('save', async function(next) {
