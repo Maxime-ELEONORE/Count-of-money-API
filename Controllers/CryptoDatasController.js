@@ -2,13 +2,13 @@ import CoinGeckoService from '../Services/CoinGueckoService.js';
 import CryptoData from '../Models/CryptoDataModel.js';
 
 const CryptoDataController = {
-    async updateMarketData(coinID) {
-        const marketData = await CoinGeckoService.fetchMarketData(coinID);
+    async updateMarketData(cryptoID) {
+        const marketData = await CoinGeckoService.fetchMarketData(cryptoID);
         if (!marketData) return;
 
         const {market_data, symbol, name, market_cap_rank, circulating_supply, total_supply, max_supply} = marketData;
         await CryptoData.findOneAndUpdate(
-            {coinID},
+            {crypto: cryptoID},
             {
                 symbol,
                 name,
@@ -27,10 +27,10 @@ const CryptoDataController = {
             {upsert: true}
         );
     },
-    async updateCandlestickData(coinID) {
-        const candlesticksData4days = await CoinGeckoService.fetchCandlestickData(coinID);
-        const candlesticksData4hours = await CoinGeckoService.fetchCandlestickData(coinID, 30);
-        const candlesticksData30mins = await CoinGeckoService.fetchCandlestickData(coinID, 1);
+    async updateCandlestickData(cryptoID) {
+        const candlesticksData4days = await CoinGeckoService.fetchCandlestickData(cryptoID);
+        const candlesticksData4hours = await CoinGeckoService.fetchCandlestickData(cryptoID, 30);
+        const candlesticksData30mins = await CoinGeckoService.fetchCandlestickData(cryptoID, 1);
 
         if (!candlesticksData4days || !candlesticksData4hours || !candlesticksData30mins) return;
 

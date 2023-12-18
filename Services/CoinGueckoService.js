@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Crypto from '../Models/CryptoModel.js';
 
 const baseURL = 'https://api.coingecko.com/api/v3';
 
@@ -25,25 +26,10 @@ const CoinGeckoService = {
     }
   },
 
-  getCryptoHistory: async (coinId, days = 'max') => {
+  fetchMarketData: async (cryptoID) => {
     try {
-      const response = await axios.get(`${baseURL}/coins/${coinId}/market_chart`, {
-        headers: {
-          'x-cg-demo-api-key': process.env.COIN_GUEKO_API_KEY,
-        },
-        params: {
-          vs_currency: 'eur',
-          days: days,
-        },
-      });
-      return response.data;
-    } catch (error) {
-      console.error(`Error fetching history for ${coinId}:`, error);
-      throw error;
-    }
-  },
-  fetchMarketData: async (coinId) => {
-    try {
+      const crypto = await Crypto.findById(cryptoID);
+      const coinId = crypto.coinID;
       const response = await axios.get(`${baseURL}/coins/${coinId}`);
       return response.data;
     } catch (error) {
@@ -52,9 +38,11 @@ const CoinGeckoService = {
     }
   },
 
-  fetchCandlestickData: async (coinID, days = 'max') => {
+  fetchCandlestickData: async (cryptoID, days = 'max') => {
     try {
-      const response = await axios.get(`${baseURL}/coins/${coinID}/ohlc`, {
+      const crypto = await Crypto.findById(cryptoID);
+      const coinId = crypto.coinID;
+      const response = await axios.get(`${baseURL}/coins/${coinId}/ohlc`, {
         params: { vs_currency: 'eur', days }
       });
       return response.data;
