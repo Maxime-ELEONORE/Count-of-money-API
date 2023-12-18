@@ -7,8 +7,8 @@ const CryptosJobs = {
     try {
       const cryptos = await Crypto.find();
       for (const crypto of cryptos) {
-        await CryptoDataController.updateMarketData(crypto.coinID)
-        await CryptoDataController.updateCandlestickData(crypto.coinID)
+        await CryptoDataController.updateMarketData(crypto._id)
+        await CryptoDataController.updateCandlestickData(crypto._id)
       }
     } catch (err) {
       console.error('Error updating crypto history:', err);
