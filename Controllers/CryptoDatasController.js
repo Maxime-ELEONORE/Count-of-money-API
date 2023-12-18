@@ -74,10 +74,10 @@ const CryptoDataController = {
     async getDatas(req, res)  {
         try {
             let result = [];
-            const cryptoIds = req.body.cryptoIds;
-            console.log(req)
+            const cryptoIds = req.params.cryptoIds.split(',');
+            console.log(req.params)
             console.log(cryptoIds)
-            for (let cryptoId of cryptoIds){
+            for (const cryptoId of cryptoIds){
                 const datas = await CryptoData.findOne({crypto: cryptoId}).populate('crypto')
                 result.append(datas);
             }
