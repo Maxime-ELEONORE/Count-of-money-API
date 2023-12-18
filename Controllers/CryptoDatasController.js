@@ -75,7 +75,9 @@ const CryptoDataController = {
         try {
             let result = [];
             const cryptoIds = req.body.cryptoIds;
-            for (let cryptoId in cryptoIds){
+            console.log(req.body)
+            console.log(cryptoIds)
+            for (let cryptoId of cryptoIds){
                 const datas = await CryptoData.findOne({crypto: cryptoId}).populate('crypto')
                 result.append(datas);
             }
