@@ -31,11 +31,6 @@ services:
 
   express-app:
     image: tydaks/express-app-image:latest
-    deploy:
-      replicas: 3
-      placement:
-        constraints:
-          - node.role == worker
     environment:
       COIN_GUEKO_API_KEY: CG-Q1bJd5mxtq8WNGxEe1cRayem
       MONGODB_URI: mongodb://admin:pass@mongodb:27017
