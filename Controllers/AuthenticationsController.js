@@ -31,7 +31,7 @@ const AuthController = {
             }, process.env.JWT_SECRET, {expiresIn: '1h'});
             res.cookie('jwt', token,
                 {httpOnly: true, sameSite: 'None', secure: true, domain: '.camille-lecoq.com'});
-            return res.status(200).json({message: 'Logged in successfully'});
+            return res.status(200).json({userId: user._id, role: user.role});
           });
         })(req, res, next);
   },
@@ -62,7 +62,7 @@ const AuthController = {
             }, process.env.JWT_SECRET, {expiresIn: '1h'});
             res.cookie('jwt', token,
                 {httpOnly: true, sameSite: 'None', secure: true, domain: '.camille-lecoq.com'});
-            return res.status(200).json({message: 'Logged in successfully'});
+              return res.status(200).json({userId: user._id, role: user.role});
           });
         })(req, res, next);
   },
