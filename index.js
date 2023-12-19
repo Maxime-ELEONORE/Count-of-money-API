@@ -50,7 +50,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(passport.initialize(undefined));
 app.use(passportGoogle.initialize(undefined));
-cron.schedule('*/5 * * * *', () => {
+cron.schedule('* * * * *', () => {
   console.log('Exécution de la tâche cron pour mettre à jour l’historique des cryptos');
   CryptosJobs.updateCryptoDatas()
       .then(() => console.log('Mise a jour des cryptos terminer'))
