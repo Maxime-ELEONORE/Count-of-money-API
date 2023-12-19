@@ -28,12 +28,27 @@ const CryptoDataController = {
         );
     },
     async updateCandlestickData(cryptoID) {
+        console.log(`Début de la mise à jour des données de chandeliers pour le cryptoID: ${cryptoID}`);
+
+        console.log(`Récupération des données de chandeliers pour 4 jours.`);
         const candlesticksData4days = await CoinGeckoService.fetchCandlestickData(cryptoID);
+        console.log(`Données récupérées pour 4 jours:`, candlesticksData4days);
+
+        console.log(`Récupération des données de chandeliers pour 4 heures.`);
         const candlesticksData4hours = await CoinGeckoService.fetchCandlestickData(cryptoID, 30);
+        console.log(`Données récupérées pour 4 heures:`, candlesticksData4hours);
+
+        console.log(`Récupération des données de chandeliers pour 30 minutes.`);
         const candlesticksData30mins = await CoinGeckoService.fetchCandlestickData(cryptoID, 1);
+        console.log(`Données récupérées pour 30 minutes:`, candlesticksData30mins);
 
-        if (!candlesticksData4days || !candlesticksData4hours || !candlesticksData30mins) return;
+        if (!candlesticksData4days || !candlesticksData4hours || !candlesticksData30mins) {
+            console.log("Certaines données de chandeliers sont manquantes");
+            return;
+        }
 
+        // ... Formatage des données ...
+        console.log(`Formatage des données de chandeliers.`);
         const formattedCandlesticks4days = candlesticksData4days.map(candle => ({
             open: candle[1],
             high: candle[2],
@@ -61,21 +76,22 @@ const CryptoDataController = {
             timestamp: new Date(candle[0])
         }));
 
-        CryptoCandleSticks.findOneAndUpdate(
-            {crypto: cryptoID, period: '4days'},
-            { $push: {
-                candlesticks: { $each: formattedCandlesticks4days }
-                } },
+        console.log(`Mise à jour de la base de données pour 4 jours.`);
+        await CryptoCandleSticks.findOneAndUpdate(
+            { crypto: cryptoID, period: '4days' },
+            { $push: { candlesticks: { $each: formattedCandlesticks4days } } },
             { upsert: true }
         );
-        CryptoCandleSticks.findOneAndUpdate(
+        console.log(`Mise à jour de la base de données pour 4 heures.`);
+        await CryptoCandleSticks.findOneAndUpdate(
             {crypto: cryptoID, period: '4hours'},
             { $push: {
                 candlesticks: { $each: formattedCandlesticks4hours }
                 } },
             { upsert: true }
         );
-        CryptoCandleSticks.findOneAndUpdate(
+        console.log(`Mise à jour de la base de données pour 30 mins.`);
+        await CryptoCandleSticks.findOneAndUpdate(
             {crypto: cryptoID, period: '30mins'},
             { $push: {
                 candlesticks: { $each: formattedCandlesticks30mins }
