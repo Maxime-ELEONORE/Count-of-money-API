@@ -79,7 +79,7 @@ const CryptoDataController = {
             console.log(cryptoIds)
             for (const cryptoId of cryptoIds){
                 const datas = await CryptoData.findOne({crypto: cryptoId})
-                result.append(datas);
+                result.push(datas);
             }
             console.log(result);
             res.status(200).send(result)
