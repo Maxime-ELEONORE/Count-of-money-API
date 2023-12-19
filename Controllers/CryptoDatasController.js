@@ -1,5 +1,5 @@
 import CoinGeckoService from '../Services/CoinGueckoService.js';
-import CryptoData from '../Models/CryptoDataModel.js';
+import { CryptoData, CryptoCandleSticks } from '../Models/CryptoDataModel.js';
 
 const CryptoDataController = {
     async updateMarketData(cryptoID) {
@@ -61,12 +61,24 @@ const CryptoDataController = {
             timestamp: new Date(candle[0])
         }));
 
-        await CryptoData.findOneAndUpdate(
-            {crypto: cryptoID},
+        CryptoCandleSticks.findOneAndUpdate(
+            {crypto: cryptoID, period: '4days'},
             { $push: {
-                candlesticks4days: { $each: formattedCandlesticks4days },
-                    candlesticks4hours: { $each: formattedCandlesticks4hours },
-                    candlesticks30mins: { $each: formattedCandlesticks30mins },
+                candlesticks: { $each: formattedCandlesticks4days }
+                } },
+            { upsert: true }
+        );
+        CryptoCandleSticks.findOneAndUpdate(
+            {crypto: cryptoID, period: '4hours'},
+            { $push: {
+                candlesticks: { $each: formattedCandlesticks4hours }
+                } },
+            { upsert: true }
+        );
+        CryptoCandleSticks.findOneAndUpdate(
+            {crypto: cryptoID, period: '30mins'},
+            { $push: {
+                candlesticks: { $each: formattedCandlesticks30mins }
                 } },
             { upsert: true }
         );
@@ -75,17 +87,35 @@ const CryptoDataController = {
         try {
             let result = [];
             const cryptoIds = req.params.cryptoIds.split(',');
-            console.log(req.params)
-            console.log(cryptoIds)
             for (const cryptoId of cryptoIds){
                 const datas = await CryptoData.findOne({crypto: cryptoId}).populate('crypto')
-                    .select('-candlesticks4days -candlesticks4hours -candlesticks30mins');
                 result.push(datas);
             }
-            console.log(result);
             res.status(200).send(result)
         } catch(err) {
             res.status(500).send({error: err})
+        }
+    },
+    async getCandlesticksData(req, res) {
+        try {
+            const cryptoId = req.params.cryptoId;
+            const period = req.params.period;
+            const startDate = req.query.start ? new Date(req.query.start) : null;
+            const endDate = req.query.end ? new Date(req.query.end) : null;
+
+            const params = { crypto: cryptoId, period: period };
+            const candlesticksData = await CryptoCandleSticks.findOne(params);
+
+            if (candlesticksData && startDate && endDate) {
+                candlesticksData.candlesticks = candlesticksData.candlesticks.filter(candlestick => {
+                    const timestamp = new Date(candlestick.timestamp);
+                    return timestamp >= startDate && timestamp <= endDate;
+                });
+            }
+
+            res.status(200).json(candlesticksData);
+        } catch (err) {
+            res.status(500).send({ error: err });
         }
     },
 };

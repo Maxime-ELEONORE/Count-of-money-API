@@ -4,4 +4,5 @@ import CryptoDataController from '../Controllers/CryptoDatasController.js';
 const router = express.Router();
 
 router.get('/:cryptoIds', CryptoDataController.getDatas);
+router.get('/fiddlesticks/:userId/:period', CryptoDataController.getCandlesticksData);
 export default router;

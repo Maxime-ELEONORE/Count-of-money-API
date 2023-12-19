@@ -29,9 +29,20 @@ const CryptoDataSchema = new mongoose.Schema({
     totalSupply: Number,
     maxSupply: Number,
     lastUpdated: Date,
-    candlesticks4days: [CandlestickSchema],
-    candlesticks4hours: [CandlestickSchema],
-    candlesticks30mins: [CandlestickSchema]
 });
 
-export default mongoose.model('CryptoData', CryptoDataSchema);
+const CandlestickDataSchema = new mongoose.Schema({
+    crypto: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Crypto'
+    },
+    period: {
+        type: String,
+        enum: ['4days', '4hours', '30mins']
+    },
+    candlesticks: [CandlestickSchema]
+});
+
+CandlestickDataSchema.index({ crypto: 1, period: 1 }, { unique: true });
+export const CryptoData = mongoose.model('CryptoData', CryptoDataSchema);
+export const CryptoCandleSticks = mongoose.model('CryptoCandleSticks', CandlestickDataSchema);
