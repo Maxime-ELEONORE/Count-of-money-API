@@ -79,7 +79,7 @@ const UserController = {
     try {
       const userId = req.user.userId;
       const user = await User.findById(userId);
-      res.status(200).send({role: user.role});
+      res.status(200).send( { role: user.role, id: user._id } );
     } catch (err) {
       res.status(500).json({message: err.message});
     }
