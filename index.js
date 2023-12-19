@@ -18,6 +18,7 @@ import UserRoutes from './Routes/UserRoutes.js';
 import CryptoRoutes from './Routes/CryptoRoutes.js';
 import CrytoDatasRoutes from './Routes/CryptoDatasRoutes.js'
 import KeywordRoutes from "./Routes/KeywordRoutes.js";
+import RssFeedsRoutes from './Routes/RssFeedsRoutes.js';
 
 const app = express();
 mongoose.connect(process.env.MONGODB_URI)
@@ -63,6 +64,7 @@ app.use('/api/users', UserRoutes);
 app.use('/api/cryptos', CryptoRoutes);
 app.use('/api/cryptodatas', CrytoDatasRoutes);
 app.use('/api/keywords', KeywordRoutes);
+app.use('/api/articles', RssFeedsRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log('Server is running on port ' + process.env.PORT);
