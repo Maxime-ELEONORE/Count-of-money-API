@@ -2,7 +2,7 @@ import axios from 'axios';
 import Crypto from '../Models/CryptoModel.js';
 import axiosRateLimit from "axios-rate-limit";
 
-const http = axiosRateLimit(axios.create(), { maxRequests: 40, perMilliseconds: 60000, maxRPS: 40 })
+const http = axiosRateLimit(axios.create(), { maxRequests: 20, perMilliseconds: 60000, maxRPS: 20 })
 const baseURL = 'https://api.coingecko.com/api/v3';
 const apiKeys = [ process.env.COIN_GUEKO_API_KEY,  process.env.COIN_GUEKO_API_KEY2,  process.env.COIN_GUEKO_API_KEY3 ];
 let apiKeyIndex = 0;
