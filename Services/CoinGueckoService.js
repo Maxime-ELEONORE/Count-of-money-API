@@ -2,13 +2,16 @@ import axios from 'axios';
 import Crypto from '../Models/CryptoModel.js';
 import axiosRateLimit from "axios-rate-limit";
 
-const http = axiosRateLimit(axios.create(), { maxRequests: 20, perMilliseconds: 60000, maxRPS: 20 })
+const http = axiosRateLimit(axios.create(), { maxRequests: 2, perMilliseconds: 60000, maxRPS: 2 })
 const baseURL = 'https://api.coingecko.com/api/v3';
 const apiKeys = [ process.env.COIN_GUEKO_API_KEY,  process.env.COIN_GUEKO_API_KEY2,  process.env.COIN_GUEKO_API_KEY3 ];
 let apiKeyIndex = 0;
 const CoinGeckoService = {
+
   getTop100Cryptos: async () => {
     try {
+      http.setMaxRPS(2)
+      http.setRateLimitOptions({ maxRequests: 2, perMilliseconds: 60000 })
       const response = await http.get(`${baseURL}/coins/markets`, {
         headers: {
           'x-cg-demo-api-key': apiKeys[apiKeyIndex%3],
@@ -31,6 +34,8 @@ const CoinGeckoService = {
 
   fetchMarketData: async (cryptoID) => {
     try {
+      http.setMaxRPS(2)
+      http.setRateLimitOptions({ maxRequests: 2, perMilliseconds: 60000 })
       const crypto = await Crypto.findById(cryptoID);
       const coinId = crypto.coinID;
       const response = await http.get(`${baseURL}/coins/${coinId}`, {
@@ -47,6 +52,8 @@ const CoinGeckoService = {
 
   fetchCandlestickData: async (cryptoID, days = 'max') => {
     try {
+      http.setMaxRPS(2)
+      http.setRateLimitOptions({ maxRequests: 2, perMilliseconds: 60000 })
       const crypto = await Crypto.findById(cryptoID);
       const coinId = crypto.coinID;
       const response = await http.get(`${baseURL}/coins/${coinId}/ohlc`, {
