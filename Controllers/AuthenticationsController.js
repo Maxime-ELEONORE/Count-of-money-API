@@ -35,10 +35,11 @@ const AuthController = {
           });
         })(req, res, next);
   },
-  logout(req, res) {
+  async logout(req, res) {
     req.logout();
-    res.status(206).json({message: 'Logged out successfully'});
-  },
+    res.clearCookie('jwt', { domain: '.camille-lecoq.com' });
+    res.status(200).json({ message: 'Déconnexion réussie' });
+},
   initiateGoogleAuth(req, res, next) {
     passport.authenticate('google',
         {scope: ['profile', 'email']})(req, res, next);
