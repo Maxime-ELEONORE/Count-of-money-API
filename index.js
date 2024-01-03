@@ -32,7 +32,7 @@ app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
-  cookie: {httpOnly: false, secure: true}
+  cookie: { secure: true }
 }));
 app.use(loggerService);
 app.use(express.urlencoded({extended: true}));
