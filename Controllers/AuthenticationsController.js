@@ -36,7 +36,10 @@ const AuthController = {
         })(req, res, next);
   },
   async logout(req, res) {
-    req.logout();
+    req.logout(function(err) {
+        if (err) { return next(err); }
+        res.redirect('/');
+    });
     res.clearCookie('jwt', { domain: '.camille-lecoq.com' });
     res.status(200).json({ message: 'Déconnexion réussie' });
 },
