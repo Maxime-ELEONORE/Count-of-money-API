@@ -1,13 +1,14 @@
 import RssFeedsService from '../Services/RssFeedsService.js';
+import Keyword from "../Models/KeywordModel.js";
 
 const RssFeedsController = {
   
   async getRssFeedsByKeywords(req, res) {
     try {
-      const keywords = req.query.keywords ? req.query.keywords.split(',') : ['bitcoin'];
-      const articlesPerKeywords = req.query.articlesperkeywords ? parseInt(req.query.articlesperkeywords, 10) : 1;
+      const keywordDocs = await Keyword.find({ userIds: { $in: [req.user.userId] } });
 
-      const response = await RssFeedsService.getRssFeedsByKeywords(keywords, articlesPerKeywords);
+      const keywords = keywordDocs.map(doc => doc.keyword);
+      const response = await RssFeedsService.getRssFeedsByKeywords(keywords, 5);
       res.status(200).send(response);
     } catch (error) {
       res.status(500).json({message: error.message});
