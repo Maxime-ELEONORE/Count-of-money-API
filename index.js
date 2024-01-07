@@ -51,7 +51,7 @@ const corsOptions = {
     credentials: true
 }
 app.use(cors({
-    origin: 'https://camille-lecoq.com',
+    origin: ['https://camille-lecoq.com', 'https://accounts.google.com'],
     credentials: true
 }));
 app.use(passport.initialize(undefined));
