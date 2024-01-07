@@ -22,6 +22,7 @@ import RssFeedsRoutes from './Routes/RssFeedsRoutes.js';
 import CoinGeckoService from "./Services/CoinGueckoService.js";
 
 const app = express();
+console.log(process.env.MONGODB_URI)
 mongoose.connect(process.env.MONGODB_URI)
     .then(async () => {
       console.log('Connection to MongoDB: SUCCESS !');
