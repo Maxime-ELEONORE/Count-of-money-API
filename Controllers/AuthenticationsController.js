@@ -20,7 +20,7 @@ const AuthController = {
   async login(req, res, next) {
     passport.authenticate('local',
         {failureRedirect: '/login'}, (err, user, info) => {
-          if (err) return next(err);
+          if (err) return res.status(400).json({"login":"failed"});
           if (!user) return res.status(400).json({"login":"failed"});
 
           req.logIn(user, (err) => {
