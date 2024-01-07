@@ -51,7 +51,8 @@ const AuthController = {
     });
 },
   initiateGoogleAuth(req, res, next) {
-    passport.authenticate('google',
+      this.setSecurityHeaders();
+      passport.authenticate('google',
         {scope: ['profile', 'email']})(req, res, next);
   },
   googleAuthCallback(req, res, next) {
