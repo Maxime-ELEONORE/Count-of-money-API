@@ -52,10 +52,7 @@ const corsOptions = {
     },
     credentials: true
 }
-app.use(cors({
-    origin: ['https://camille-lecoq.com', 'https://accounts.google.com', undefined],
-    credentials: true
-}));
+app.use(cors(corsOptions));
 app.use(passport.initialize(undefined));
 app.use(passportGoogle.initialize(undefined));
 
