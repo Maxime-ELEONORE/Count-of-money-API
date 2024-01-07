@@ -21,7 +21,7 @@ const AuthController = {
     passport.authenticate('local',
         {failureRedirect: '/login'}, (err, user, info) => {
           if (err) return next(err);
-          if (!user) return res.status(400).json(info);
+          if (!user) return res.status(400).json({"login":"failed"});
 
           req.logIn(user, (err) => {
             if (err) return next(err);
