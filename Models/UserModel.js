@@ -46,6 +46,12 @@ const userSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Crypto',
   }],
+  vs_currency: {
+    type: String,
+    required: true,
+    enum: ['usd', 'eur'],
+    default: 'eur',
+  },
 }, {
   timestamps: true,
 });

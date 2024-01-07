@@ -34,23 +34,19 @@ const UserController = {
 
   update: async (req, res) => {
     try {
-      console.log("on pass ici")
       const user = await User.findById(req.params.id);
       if (!user) {
         return res.status(404).json({message: 'User not found'});
       }
       let allowedUpdateFields = []
-      console.log(req.user.userRole)
       if (req.user.userRole === 'admin')
-        allowedUpdateFields = [ 'username', 'password', 'role', 'email' ];
+        allowedUpdateFields = [ 'username', 'password', 'role', 'email', 'vs_currency' ];
       else
-        allowedUpdateFields = [ 'username', 'password', 'email' ];
-      console.log(allowedUpdateFields)
+        allowedUpdateFields = [ 'username', 'password', 'email', 'vs_currency'];
       const updates = Object.keys(req.body);
       const isValidOperation = updates.
           every((update) => allowedUpdateFields.
               includes(update));
-      console.log('is valid op=>' + isValidOperation)
       if (!isValidOperation) {
         return res.status(400).json({message: 'Invalid updates!'});
       }

@@ -134,5 +134,13 @@ const CryptoDataController = {
             res.status(500).send({ error: err });
         }
     },
+    async getUSDtoEUR(req, res) {
+        try {
+            const result = await CoinGeckoService.fetchUSDtoEUR();
+            res.status(200).json(result)
+        } catch (e) {
+            res.status(500).send({ error: e });
+        }
+    }
 };
 export default CryptoDataController;

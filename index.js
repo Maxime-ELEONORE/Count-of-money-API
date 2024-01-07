@@ -50,14 +50,16 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(passport.initialize(undefined));
 app.use(passportGoogle.initialize(undefined));
+
+CryptosJobs.updateCryptoDatas().then(() => {
+    console.log("Crypto datas updated");
+}).catch(() => console.log("error fetching crypto datas"))
 cron.schedule('* * * * *', () => {
   console.log('Exécution de la tâche cron pour mettre à jour l’historique des cryptos');
   CryptosJobs.updateCryptoDatas()
       .then(() => console.log('Mise a jour des cryptos terminer'))
       .catch(() => console.log('Erreur lors de la mise a jours des historiques des cryptos'));
 });
-CryptosJobs.updateCryptoDatas().then(() => console.log("Crypto datas updated"))
-    .catch(() => console.log("error fetching crypto datas"))
 
 app.use('/api/auths', AuthenticationRoutes);
 app.use('/api/users', UserRoutes);

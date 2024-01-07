@@ -32,6 +32,27 @@ const CoinGeckoService = {
     }
   },
 
+  fetchUSDtoEUR: async () => {
+    try {
+      http.setMaxRPS(2)
+      http.setRateLimitOptions({ maxRequests: 2, perMilliseconds: 60000 })
+      const response = await http.get(`${baseURL}/simple/price`, {
+        headers: {
+          'x-cg-demo-api-key': apiKeys[apiKeyIndex%3],
+        },
+        params: {
+          ids: 'usd',
+          vs_currency: 'eur'
+        },
+      });
+      apiKeyIndex += 1;
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching ust to eur:", error);
+      return null;
+    }
+  },
+
   fetchMarketData: async (cryptoID) => {
     try {
       http.setMaxRPS(2)
