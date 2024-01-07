@@ -45,14 +45,10 @@ const AuthController = {
     });
 },
   initiateGoogleAuth(req, res, next) {
-      res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
-      res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
       passport.authenticate('google',
         {scope: ['profile', 'email']})(req, res, next);
   },
   googleAuthCallback(req, res, next) {
-    res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
-    res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
     passport.authenticate('google',
         {failureRedirect: '/login'}, (err, user, _info) => {
           if (err) {
