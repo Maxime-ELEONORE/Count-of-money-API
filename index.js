@@ -19,6 +19,7 @@ import CryptoRoutes from './Routes/CryptoRoutes.js';
 import CrytoDatasRoutes from './Routes/CryptoDatasRoutes.js'
 import KeywordRoutes from "./Routes/KeywordRoutes.js";
 import RssFeedsRoutes from './Routes/RssFeedsRoutes.js';
+import CoinGeckoService from "./Services/CoinGueckoService.js";
 
 const app = express();
 mongoose.connect(process.env.MONGODB_URI)
@@ -51,11 +52,17 @@ app.use(cors(corsOptions));
 app.use(passport.initialize(undefined));
 app.use(passportGoogle.initialize(undefined));
 
+var usdToeur = await CoinGeckoService.fetchUSDtoEUR();
+
+export const getUsdToEur = () => {
+    return usdToeur;
+}
 CryptosJobs.updateCryptoDatas().then(() => {
     console.log("Crypto datas updated");
 }).catch(() => console.log("error fetching crypto datas"))
 cron.schedule('* * * * *', () => {
   console.log('Exécution de la tâche cron pour mettre à jour l’historique des cryptos');
+  CoinGeckoService.fetchUSDtoEUR().then((res) => usdToeur = res);
   CryptosJobs.updateCryptoDatas()
       .then(() => console.log('Mise a jour des cryptos terminer'))
       .catch(() => console.log('Erreur lors de la mise a jours des historiques des cryptos'));

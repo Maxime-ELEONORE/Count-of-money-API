@@ -1,5 +1,6 @@
 import CoinGeckoService from '../Services/CoinGueckoService.js';
 import { CryptoData, CryptoCandleSticks } from '../Models/CryptoDataModel.js';
+import { getUsdToEur } from '../index.js'
 
 const CryptoDataController = {
     async updateMarketData(cryptoID) {
@@ -136,7 +137,7 @@ const CryptoDataController = {
     },
     async getUSDtoEUR(req, res) {
         try {
-            const result = await CoinGeckoService.fetchUSDtoEUR();
+            const result = getUsdToEur()
             res.status(200).json(result)
         } catch (e) {
             res.status(500).send({ error: e });
