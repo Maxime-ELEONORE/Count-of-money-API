@@ -36,8 +36,10 @@ services:
       COIN_GUEKO_API_KEY2: CG-pqaSge1zng3d43AMkrMk1Meq
       COIN_GUEKO_API_KEY3: CG-Qjjk1BV1UZ17J5BrJfSSpYAK
       MONGODB_URI: mongodb://admin:pass@mongodb:27017
-      GOOGLE_CLIENT_ID: 144285600316-9dt1f372ilaedt4a5p65eh1ir7oaimaq.apps.googleusercontent.com
-      GOOGLE_CLIENT_SECRET: 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
+#      GOOGLE_CLIENT_ID: 144285600316-9dt1f372ilaedt4a5p65eh1ir7oaimaq.apps.googleusercontent.com
+#      GOOGLE_CLIENT_SECRET: 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
+      GOOGLE_CLIENT_ID: 2320339253-4vl78i8rnficvf2er06lo9ab5isrmu63.apps.googleusercontent.com
+      GOOGLE_CLIENT_SECRET: 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
       SESSION_SECRET: super_la_session_secrete
       PORT: 4000
     depends_on:
