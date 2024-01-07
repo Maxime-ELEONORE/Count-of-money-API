@@ -17,13 +17,7 @@ const AuthController = {
       next(error);
     }
   },
-    setSecurityHeaders (req, res, next){
-        res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
-        res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
-        next();
-    },
   async login(req, res, next) {
-      this.setSecurityHeaders();
     passport.authenticate('local',
         {failureRedirect: '/login'}, (err, user, info) => {
           if (err) return next(err);
@@ -51,7 +45,8 @@ const AuthController = {
     });
 },
   initiateGoogleAuth(req, res, next) {
-      this.setSecurityHeaders();
+      res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
+      res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
       passport.authenticate('google',
         {scope: ['profile', 'email']})(req, res, next);
   },
