@@ -8,7 +8,7 @@ WORKDIR /usr/src/api
 COPY package*.json ./
 
 # Install app dependencies
-RUN npm ci
+RUN npm install
 
 # Copy the application code into the container
 COPY . .
