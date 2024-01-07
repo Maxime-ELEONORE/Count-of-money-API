@@ -50,7 +50,7 @@ const corsOptions = {
     },
     credentials: true
 }
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(passport.initialize(undefined));
 app.use(passportGoogle.initialize(undefined));
 
