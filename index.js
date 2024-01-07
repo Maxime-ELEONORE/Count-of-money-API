@@ -37,8 +37,8 @@ app.use(session({
 }));
 app.use(loggerService);
 app.use(express.urlencoded({extended: true}));
-const whitelist = ['http://localhost:3000', 'http://localhost:5000']
-//const whitelist = ['https://camille-lecoq.com', '10.17.72.229', '10.17.72.111', '10.17.72.138', "http://localhost:3000"]
+//const whitelist = ['http://localhost:3000', 'http://localhost:5000']
+const whitelist = ['https://camille-lecoq.com']
 const corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.indexOf(origin) !== -1) {
@@ -58,7 +58,7 @@ var usdToeur = await CoinGeckoService.fetchUSDtoEUR();
 export const getUsdToEur = () => {
     return usdToeur;
 }
-/*
+
 CryptosJobs.updateCryptoDatas().then(() => {
     console.log("Crypto datas updated");
 }).catch(() => console.log("error fetching crypto datas"))
@@ -68,7 +68,7 @@ cron.schedule('* * * * *', () => {
   CryptosJobs.updateCryptoDatas()
       .then(() => console.log('Mise a jour des cryptos terminer'))
       .catch(() => console.log('Erreur lors de la mise a jours des historiques des cryptos'));
-});*/
+});
 
 app.use('/api/auths', AuthenticationRoutes);
 app.use('/api/users', UserRoutes);
