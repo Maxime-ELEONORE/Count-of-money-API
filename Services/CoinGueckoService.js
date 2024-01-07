@@ -40,7 +40,7 @@ const CoinGeckoService = {
         },
         params: {
           ids: 'usd',
-          vs_currency: 'eur'
+          vs_currencies: 'eur'
         },
       });
       apiKeyIndex += 1;
