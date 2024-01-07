@@ -30,18 +30,18 @@ const AuthController = {
               userRole: user.role,
             }, process.env.JWT_SECRET, {expiresIn: '1h'});
             res.cookie('jwt', token,
-                {httpOnly: true, sameSite: 'None', secure: true, domain: '.camille-lecoq.com'});
+                //{httpOnly: true, sameSite: 'None', secure: true, domain: '.camille-lecoq.com'});
+                {httpOnly: true, sameSite: 'None', secure: true, domain: 'localhost'});
             return res.status(200).json({userId: user._id, role: user.role});
           });
         })(req, res, next);
   },
   async logout(req, res) {
     req.logout(function(err) {
-        if (err) { return next(err); }
-        res.redirect('/');
+      if (err) { return next(err); }
+      res.clearCookie('jwt', { domain: 'localhost' });
+      res.send('http://localhost:3000/');
     });
-    res.clearCookie('jwt', { domain: '.camille-lecoq.com' });
-    res.status(200).json({ message: 'Déconnexion réussie' });
 },
   initiateGoogleAuth(req, res, next) {
     passport.authenticate('google',

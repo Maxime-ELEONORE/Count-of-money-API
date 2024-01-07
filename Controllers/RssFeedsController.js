@@ -6,14 +6,21 @@ const RssFeedsController = {
   async getRssFeedsByKeywords(req, res) {
     try {
       const keywordDocs = await Keyword.find({ userIds: { $in: [req.user.userId] } });
-
       const keywords = keywordDocs.map(doc => doc.keyword);
-      const response = await RssFeedsService.getRssFeedsByKeywords(keywords, 5);
+      let response = await RssFeedsService.getRssFeedsByKeywords(keywords, 20);
+      function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+      }
+      shuffleArray(response);
       res.status(200).send(response);
     } catch (error) {
       res.status(500).json({message: error.message});
     }
   },
+  
 
   async getArticleById(req, res) {
     try {

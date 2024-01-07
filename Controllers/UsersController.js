@@ -75,16 +75,32 @@ const UserController = {
     try {
       const userId = req.user.userId;
       const user = await User.findById(userId);
+      if (!user)
+        return res.status(404).json({ message: 'User not found' });
       res.status(200).send( { role: user.role, id: user._id } );
     } catch (err) {
       res.status(500).json({message: err.message});
     }
   },
+
+  getAllUserCrypto: async (req, res) => {
+    try {
+        const userId = req.user.userId;
+        const user = await User.findById(userId);
+        if (!user)
+            return res.status(404).json({ message: 'User not found' });
+        res.status(200).json({ cryptos: user.cryptos });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}
+,
+
   add_crypto_to_user: async (req, res) => {
     try {
-      const user = await User.findById(req.params.userId);
-      if (!user.cryptos.includes(req.body.cryptoId)) {
-        user.cryptos.push(req.body.cryptoId);
+      const user = await User.findById(req.user.userId);
+      if (!user.cryptos.includes(req.params.cryptoId)) {
+        user.cryptos.push(req.params.cryptoId);
         await user.save();
         res.status(200).json("Crypto added to user.");
       } else {
@@ -97,8 +113,8 @@ const UserController = {
 
   remove_crypto_from_user: async (req, res) => {
     try {
-      const user = await User.findById(req.params.userId);
-      user.cryptos = user.cryptos.filter(cryptoId => cryptoId.toString() !== req.body.cryptoId);
+      const user = await User.findById(req.user.userId);
+      user.cryptos = user.cryptos.filter(cryptoId => cryptoId.toString() !== req.params.cryptoId);
       await user.save();
       res.status(200).json("Crypto removed from user.");
     } catch (error) {

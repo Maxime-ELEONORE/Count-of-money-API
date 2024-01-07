@@ -32,11 +32,7 @@ const RssFeedsService = {
                 combinedArticles = combinedArticles.concat(processArticles(response.data.articles));
             }
 
-            return {
-                status: "ok",
-                totalResults: combinedArticles.length,
-                articles: combinedArticles
-            };
+            return (combinedArticles);
         } catch (error) {
             console.error('Error fetching RSS feeds', error);
             throw error;

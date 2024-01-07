@@ -5,5 +5,5 @@ const router = express.Router();
 
 router.get('/:cryptoIds', CryptoDataController.getDatas);
 router.get('/usd/to/eur', CryptoDataController.getUSDtoEUR);
-router.get('/fiddlesticks/:userId/:period', CryptoDataController.getCandlesticksData);
+router.get('/fiddlesticks/:cryptoId/:period', CryptoDataController.getCandlesticksData);
 export default router;
