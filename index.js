@@ -44,6 +44,8 @@ const corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.indexOf(origin) !== -1) {
             callback(null, true)
+        } else if (origin === undefined) {
+            callback(null, true)
         } else {
             callback(new Error('Not allowed by CORS'))
         }
@@ -51,7 +53,7 @@ const corsOptions = {
     credentials: true
 }
 app.use(cors({
-    origin: ['https://camille-lecoq.com', 'https://accounts.google.com'],
+    origin: ['https://camille-lecoq.com', 'https://accounts.google.com', undefined],
     credentials: true
 }));
 app.use(passport.initialize(undefined));
