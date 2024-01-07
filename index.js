@@ -3,7 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import session from 'express-session';
-import cookieParser from 'cookie-parser';
+import cookieParser, {signedCookies} from 'cookie-parser';
 import cron from 'node-cron';
 
 import passport from './Initialisations/PassportLocal.js';
@@ -56,6 +56,7 @@ app.use((req, res,next) =>
 {
     res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
     res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
+    next();
 }
 )
 app.use(passport.initialize(undefined));
